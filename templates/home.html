@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block body %}
+    <div class="container">
+    {% for quote in object_list %}
+        <div class="card text-left">
+          <div class="card-header text-danger date-back">
+            {{ quote.quote_category.title }}
+          </div>
+          <div class="card-body">
+            <p class="card-text">{{ quote.quote }}</p>
+          </div>
+          <div class="card-footer text-muted">
+            - {{ quote.author }}
+          </div>
+        </div>
+        <br>
+    {% endfor %}
+    </div>
+{% endblock %}
